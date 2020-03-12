@@ -27,10 +27,10 @@ public class Operation {
 
     @Override
     public String toString() {
-        return date +
-                ", " + type +
-                ", " + amount +
-                ", " + balance +
-                ", '" + accountId + '\'' + '\n';
+        return type +
+                " | " + date +
+                " | " + amount +
+                " | " + balance +
+                " | '" + accountId + '\'' + '\n';
     }
 }

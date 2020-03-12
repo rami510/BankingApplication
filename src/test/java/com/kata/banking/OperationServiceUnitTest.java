@@ -65,7 +65,7 @@ public class OperationServiceUnitTest {
         operationService.deposit(account,new BigDecimal(700));
         List<Operation> operationList=operationService.getAccountOperationHistory(account.getId());
 
-     //   System.out.println(operationList);
+        System.out.println(operationList);
 
         //THEN
 
