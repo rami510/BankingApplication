@@ -20,7 +20,6 @@ public class OperationServiceUnitTest {
     @BeforeEach
     public void createServices() {
         this.operationService = new OperationServiceImpl();
-
     }
 
     private Account setupAccount(BigDecimal amount) {

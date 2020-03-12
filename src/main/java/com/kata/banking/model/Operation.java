@@ -27,6 +27,7 @@ public class Operation {
 
     @Override
     public String toString() {
+
         return type +
                 " | " + date +
                 " | " + amount +
