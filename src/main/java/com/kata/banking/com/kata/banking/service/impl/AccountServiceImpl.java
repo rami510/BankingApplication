@@ -9,6 +9,16 @@ import java.util.List;
 import static java.util.Objects.isNull;
 
 public class AccountServiceImpl implements AccountService {
+    private AccountServiceImpl() {
+    }
+
+    private static AccountService instance;
+
+    public static AccountService getInstance() {
+        if (isNull(instance))
+            instance = new AccountServiceImpl();
+        return instance;
+    }
 
     // we should delegate data input output to a repository layer (no database is needed on our case we chose to make it simple)
     private List<Account> accountList = new ArrayList<Account>();

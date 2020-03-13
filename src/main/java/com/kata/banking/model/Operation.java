@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Data
 public class Operation {
@@ -11,14 +12,16 @@ public class Operation {
         WITHDRAW("Withdraw"),
         DEPOSIT("Deposit");
         private String typeName;
-
+        public String getTypeName(){
+            return typeName;
+        }
         OperationType(String type) {
             this.typeName = type;
         }
     }
 
     private String id;
-    private Instant date = Instant.now();
+    private LocalDateTime date = LocalDateTime.now();
     private OperationType type;
     private BigDecimal amount;
     private BigDecimal balance = new BigDecimal(0);
